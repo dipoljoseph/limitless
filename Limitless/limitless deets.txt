@@ -1,0 +1,14 @@
+db: dipol1
+user: joseph
+pass: password
+
+site: Limitless Group Co.
+user: joseph
+pass: password
+
+font: Aktiv Grotesk
+
+color palettes: 
+#C9817D pink
+#FFB74D yellow
+#242424 black

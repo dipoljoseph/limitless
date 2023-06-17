@@ -1,0 +1,534 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Aktiv;
+    src: url(Aktiv\ Grotesk/otf/AktivGrotesk-Regular.otf);
+}
+
+@font-face {
+    font-family: AktivLight;
+    src: url(Aktiv\ Grotesk/otf/AktivGrotesk-Light.otf);
+}
+
+body {
+    font-family: Aktiv;
+    font-size: clamp(0.25rem, -0.0374rem + 1.2261vw, 1.25rem);
+}
+
+body h1 {
+    font-family: Aktiv;
+    font-weight: bold;
+    font-size: clamp(0.6875rem, 0.2565rem + 1.8391vw, 2.1875rem);
+    color: black;
+}
+
+body h2 {
+    font-family: Aktiv;
+    font-weight: bold;
+    font-size: clamp(0.5rem, 0.1947rem + 1.3027vw, 1.5625rem);
+    color: black;
+}
+
+body h3 {
+    font-size: clamp(0.40625rem, 0.1099rem + 1.2644vw, 1.4375rem);
+}
+
+nav {
+    height: 80px;
+    width: 100%;
+    background: #C9817D;
+}
+
+.nav-no {
+    background: #FFB74D;
+    width: 300px; 
+    margin: 0 0px; 
+    padding-left: 20px;
+}
+
+.phone-icon {
+    margin-right: 10px;
+    margin-top: 25px;
+    float: left;
+}
+
+label.logo {
+    color: white;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+
+.logo-navbar {
+    width: 300px;
+    padding-top: 15px;
+}
+
+nav ul {
+    float: right;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+a.active, a:hover {
+    background: #f5bdba;
+    transition: .5s;
+    color: #C9817D;
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+/*Mobile Res*/
+@media (max-width: 1000px){
+    label.logo{
+        padding-left: 8%;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+    .logo-navbar {
+        width: 150px;
+        padding-top: 25px;
+    }
+}
+
+@media (max-width: 1600px){
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #C9817D;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a {
+        font-size: 14px;
+    }
+    a:hover, a.active {
+        background: none;
+        color: #f5bdba;
+    }
+    #check:checked ~ ul {
+        left: 0;
+    }
+    .nav-no {
+        display: none;
+    }
+}
+
+/*slider pic*/
+.slider {
+    width: 100%;
+}
+
+/*services*/
+.services {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.service-logo{
+    width: 5%;
+    margin-top: 5%;
+    margin-bottom: 2.5%;
+}
+
+.column {
+    display: flex;
+}
+
+.col-left {
+    width: 33%;
+}
+
+.col-mid {
+    width: 33%;
+}
+
+.col-right {
+    width: 33%;
+}
+
+.service-pics {
+    width: 90%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(201, 129, 125, .6);
+    padding-top: 20%;
+    padding-bottom: 20%;
+    padding-left: 8%;
+    padding-right: 8%;
+    width: 65%;
+}
+
+.card-text {
+    font-family: AktivLight;
+    font-size: clamp(0.25rem, 0.0345rem + 0.9195vw, 1rem);
+}
+
+.centered-bot {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(201, 129, 125, .6);
+    width: 90%;
+    padding-top: 5.5%;
+    padding-bottom: 5.5%;
+}
+
+.textbox {
+    color: white;
+    background: #C9817D;
+    width: 27%;
+    padding: 1% 0;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-bottom: 7%;
+}
+
+.line-break {
+    width: 100%;
+    margin-bottom: 15%
+}
+
+/*our company*/
+.our-comp {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.comp-img {
+    width: 100%;
+}
+
+.comp-leftcol {
+    width: 50%;
+}
+
+.comp-rightcol {
+    width: 50%;
+    padding-left: 5%;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    padding-right: 5%;
+}
+
+.comp-rightcol h3 {
+    color: #C9817D;
+    margin-bottom: 5%;
+}
+
+.comp-rightcol h1 {
+    margin-bottom: 5%;
+}
+
+.comp-rightcol p {
+    font-family: AktivLight;
+}
+
+.yellow-button {
+    color: black;
+    background: #FFB74D;
+    width: 30%;
+    border: none;
+    font-family: Aktiv;
+    font-size: clamp(0.25rem, -0.0014rem + 1.0728vw, 1.125rem);
+    margin: 10% 0;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    cursor: pointer;
+}
+
+/*portfolio*/
+.portfolio {
+    background: #242424;
+    padding-top: 7%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 7%;
+}
+
+.portfolio p {
+    text-align: center;
+    color: #C9817D;
+    font-size: clamp(0.40625rem, 0.1099rem + 1.2644vw, 1.4375rem);
+    margin-bottom: 4%;
+}
+
+.portfolio h1 {
+    text-align: center;
+    color: white;
+    margin-bottom: 4%;
+}
+
+.portfolio a {
+    color: white;
+    font-size: clamp(0.40625rem, 0.1099rem + 1.2644vw, 1.4375rem);
+    margin-left: 3%;
+}
+
+.portfolio a:hover {
+    background: none;
+    color: #C9817D;
+}
+
+.port-img {
+    width: 20%;
+    margin: 1% 1%;
+}
+
+.pic-row {
+    width: 100%;
+    text-align: center;
+}
+
+.p-footer {
+    color: white;
+    background: #C9817D;
+    text-align: center;
+    padding: 5%;
+}
+
+.p-footer pre {
+    color: #FFB74D;
+    font-weight: bold;
+    text-align: left;
+}
+
+.p-footer b {
+    color: white;
+    font-size: clamp(1.5625rem, 1.2033rem + 1.5326vw, 2.8125rem);
+}
+
+.p-row {
+    display: inline-block;
+    margin-right: 2.5%;
+    text-align: center;
+}
+
+/*team members*/
+.team-members {
+    text-align: center;
+    font-weight: bold;
+    color: #C9817D;
+    padding: 5% 10%;
+}
+
+.team-members p {
+    margin-bottom: 5%;
+}
+
+.team-members h1 {
+    margin-bottom: 5%;
+}
+
+.team-png {
+    width: 100%;
+    margin-bottom: 5%;
+}
+
+.hc-text {
+    color: black;
+    font-weight: lighter;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.teamlogo-png {
+    width: 20%;
+}
+
+/*footer*/
+.footer {
+    background: #242424;
+    padding-top: 8%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 4%;
+    color: white;
+    font-size: clamp(0.625rem, 0.5172rem + 0.4598vw, 1rem);
+}
+
+.f-leftcolumn {
+    width: 33%;
+    padding-left: 5%;
+}
+
+.f-midcolumn {
+    width: 33%;
+    padding-top: 1%;
+    padding-left: 8%;
+}
+
+.f-rightcolumn {
+    width: 33%;
+    padding-top: 1%;
+}
+
+.f-logo {
+    width: 35%;
+    margin-bottom: 15%;
+}
+
+.footer h1 {
+    color: white;
+    font-size: clamp(1.25rem, 0.4418rem + 3.4483vw, 4.0625rem);
+}
+
+.f-namedesc {
+    font-size: clamp(0.5rem, 0.3563rem + 0.613vw, 1rem);
+    letter-spacing: 1px;
+    margin-bottom: 15%;
+}
+
+.soc-pic {
+    width: 8%;
+    margin-right: 2%;
+}
+
+.soc-pic:hover {
+    cursor: pointer;
+}
+
+.f-menu {
+    font-size: clamp(0.625rem, 0.4454rem + 0.7663vw, 1.25rem);
+    font-weight: bolder;
+    margin-bottom: 8%;
+}
+
+.f-midcolumn a {
+    color: white;
+    display: block;
+    font-size: clamp(0.5rem, 0.2845rem + 0.9195vw, 1.25rem);
+    font-weight: bold;
+    margin-bottom: 8%;
+    margin-top: 10%;
+}
+
+.f-midcolumn a:hover {
+    color:  #C9817D;
+    background: none;
+}
+
+.f-rightcolumn h2{
+    margin-bottom: 8%;
+    color: white;
+    font-size: clamp(0.625rem, 0.4454rem + 0.7663vw, 1.25rem);
+}
+
+.f-rightcolumn p{
+    margin-bottom: 8%;
+    font-size: clamp(0.5rem, 0.2845rem + 0.9195vw, 1.25rem);
+}
+
+.f-rightcolumn label {
+    font-weight: bolder;
+    padding-bottom: 10%;
+    font-size: clamp(0.5rem, 0.2845rem + 0.9195vw, 1.25rem);
+}
+
+.f-rightcolumn input {
+    width: 100%;
+    height: 15%;
+    border: none;
+}
+
+.f-rightcolumn button {
+    margin-top: 5%;
+    margin-bottom: 15%;
+}
+
+.footer-line {
+    margin-top: 4%;
+    margin-bottom: 4%;
+    margin-left: 5%;
+    width: 88%;
+}
+
+.copyright {
+    text-align: center;
+    letter-spacing: 1%;
+    font-size: clamp(0.625rem, 0.5172rem + 0.4598vw, 1rem);
+}
+
+.c-logo {
+    margin-top: 5%;
+    width: 12%;
+    margin-right: 5%;
+}
+
+.c-logo:hover {
+    cursor: pointer;
+}
+
+/* Font Clamp
+h1: font-size: clamp(0.6875rem, 0.2565rem + 1.8391vw, 2.1875rem);
+h2: font-size: clamp(0.5rem, 0.1947rem + 1.3027vw, 1.5625rem);
+h3: font-size: clamp(0.40625rem, 0.1099rem + 1.2644vw, 1.4375rem);
+p: font-size: clamp(0.25rem, -0.0374rem + 1.2261vw, 1.25rem);
+button: font-size: clamp(0.25rem, -0.0014rem + 1.0728vw, 1.125rem);
+*/
